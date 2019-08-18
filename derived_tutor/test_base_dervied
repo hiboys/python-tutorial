@@ -1,0 +1,36 @@
+# 继承
+
+
+class A:
+
+    def ping(self):
+        print("A ping")
+
+
+class B(A):
+
+    def ping(self):
+        print("B ping")
+
+
+class C(A):
+
+    def ping(self):
+        print("C ping")
+
+
+class D(B, C):
+
+    def pong(self):
+        print("D pong")
+
+    def ping(self):
+        #C.ping(self)
+        super().ping()
+
+
+if __name__ == "__main__":
+
+    d = D()
+    d.ping()
+    print(D.__mro__)
