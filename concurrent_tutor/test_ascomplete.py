@@ -1,6 +1,5 @@
 # 使用 ThreadPoolExecutor 进行简单的并发处理
 
-
 from concurrent import futures
 from concurrent.futures import ThreadPoolExecutor
 import threading
